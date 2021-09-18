@@ -1,0 +1,115 @@
+.comingup {
+  padding: 150px 200px 85px 200px;
+  position: relative;
+  @include flex(column, center, center);
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: calc(120% - 190px);
+    background-color: $color-dark-2;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    z-index: -1;
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+  }
+  &__slider {
+    @include flex(row, center, space-around);
+    text-align: center;
+    &--list {
+      @include flex(row);
+      overflow: hidden;
+      width: 1120px;
+      scroll-behavior: smooth;
+      transition: all 0.5s ease;
+    }
+    &--next {
+      font-size: 2rem;
+      margin-right: -5rem;
+      padding: 0 4rem;
+      cursor: pointer;
+      color: $color-blue-primary;
+    }
+    &--previous {
+      font-size: 2rem;
+      margin-left: -5rem;
+      padding: 0 4rem;
+      cursor: pointer;
+      color: $color-blue-primary;
+    }
+    &--img {
+      padding: 1rem 5rem;
+      border-radius: 50%;
+      overflow: hidden;
+      object-fit: cover;
+      margin-bottom: 2rem;
+    }
+    &--date {
+      font-size: 1.4rem;
+      color: #c2d4f8;
+      font-weight: 600;
+    }
+    &--item {
+      margin-bottom: 7rem;
+      transition: color 0.3s linear;
+      cursor: pointer;
+      &:hover {
+        color: $color-blue-primary;
+      }
+    }
+    &--item > * {
+      pointer-events: none;
+    }
+  }
+  &__content {
+    @include flex(row, stretch, start);
+    background-color: $color-dark-1;
+    padding: 9rem 10rem;
+    border-radius: 10px;
+    position: relative;
+
+    &--left {
+      width: 50%;
+      padding-right: 1rem;
+      height: 445px;
+      @include flex(column, start, space-between);
+    }
+    &--right {
+      width: 50%;
+      margin-left: 14rem;
+      position: absolute;
+      top: 15%;
+      right: -8%;
+    }
+    &--img {
+      object-fit: cover;
+      overflow: hidden;
+      width: 570px;
+      height: 450px;
+      border-radius: 10px;
+    }
+    &--title {
+      margin-bottom: 4rem;
+    }
+    &--desc {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.slider-active {
+  color: $color-blue-primary;
+}

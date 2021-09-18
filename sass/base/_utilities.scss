@@ -1,0 +1,101 @@
+.big-title {
+  font-size: 96px;
+}
+
+.title-slider {
+  font-family: "Agency FB", sans-serif;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+.title--moveFromTop {
+  animation: textFromTop 0.5s ease-in;
+}
+
+.title--moveFromLeft {
+  animation: textFromLeft 0.5s ease-in 0.5s;
+  animation-fill-mode: backwards;
+}
+
+.title-block-small {
+  font-family: "Agency FB";
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: rgb(30 29 50 / 30%) 0px 2px 4.8px;
+  text-transform: uppercase;
+}
+
+.title-small {
+  position: relative;
+  font-family: "Agency FB";
+  font-size: 40px;
+  font-weight: 700;
+  text-shadow: rgb(30 29 50 / 30%) 0px 2px 4.8px;
+  text-transform: uppercase;
+}
+
+.title-hidden {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  opacity: 0.02;
+  text-shadow: rgb(30 29 50 / 30%) 0px 2px 4.8px;
+  color: rgb(194, 212, 248);
+  font-family: "Agency FB";
+  font-size: 88px;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.newgame {
+  word-spacing: 20px;
+  color: $color-blue-primary;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.content-date {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: rgb(194, 212, 248);
+  margin-left: 18rem;
+}
+
+.text-content {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  color: $color-text-gray;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-content-center {
+  padding: 2rem 20rem;
+}
+
+.small-span-text {
+  color: #3dd0d8;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.small-span-text-white {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.text-desc {
+  color: $color-text-gray;
+  font-size: 1.6rem;
+  font-weight: 300;
+}

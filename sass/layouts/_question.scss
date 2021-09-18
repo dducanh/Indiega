@@ -1,0 +1,51 @@
+.question {
+  padding: 15rem 20rem;
+  background-color: $color-dark-1;
+  &__list {
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  &__item {
+    @include flex(row, center, center);
+    padding: 6rem 1.5rem;
+    &--title {
+      margin-bottom: 3rem;
+      font-size: 2.4rem;
+    }
+    &--number {
+      text-align: center;
+      margin: 0 4rem;
+      padding: 2.5rem 3rem;
+      background-image: linear-gradient(
+        to right,
+        $color-blue-primary 0%,
+        rgba(124, 105, 227, 0.64) 100%
+      );
+      border-radius: 50%;
+    }
+  }
+  &__item:nth-child(odd) {
+    text-align: left;
+    @include flex(row, center, space-between);
+  }
+  &__item:nth-child(even) {
+    text-align: right;
+  }
+  &__item:first-child {
+    border-right: 1px solid rgba(194, 212, 248, 0.2);
+    border-bottom: 1px solid rgba(194, 212, 248, 0.2);
+  }
+  &__item:nth-child(2) {
+    border-bottom: 1px solid rgba(194, 212, 248, 0.2);
+  }
+  &__item:nth-child(3) {
+    border-right: 1px solid rgba(194, 212, 248, 0.2);
+  }
+}
+
+.especially {
+  padding: 2.5rem 3.5rem;
+  text-align: center;
+}

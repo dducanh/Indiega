@@ -1,0 +1,52 @@
+.contact {
+  padding: 10rem 25rem;
+  @include flex(row, center, space-between);
+  background-image: linear-gradient(
+    to right,
+    $color-blue-primary,
+    $color-purple
+  );
+  &__left {
+    width: 48%;
+    &--desc {
+      font-size: 1.6rem;
+      font-weight: 300;
+      padding-left: 1rem;
+    }
+  }
+  &__right {
+    width: 48%;
+    position: relative;
+    &--input input {
+      width: 100%;
+      background: rgb(255, 255, 255);
+      border-radius: 10px;
+      padding: 20px 40px;
+      text-transform: uppercase;
+      font-style: italic;
+      color: rgb(30, 29, 50);
+      outline: none;
+      border: none;
+      line-height: normal;
+    }
+
+    &--btn {
+      background: transparent;
+      border: none;
+      padding: 0px;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: $color-blue-primary;
+      &:hover {
+        color: $color-purple;
+      }
+    }
+
+    &--btn i {
+      transition: all 0.3s ease-out 0s;
+    }
+  }
+}

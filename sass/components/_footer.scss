@@ -1,0 +1,58 @@
+.footer {
+  padding: 10rem 20rem;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.527),
+      rgba(0, 0, 0, 0.527)
+    ),
+    url(../images/footer-bg.jpg);
+  width: 1581px;
+  height: 487px;
+  position: relative;
+  &__content {
+    @include flex(row, center, center);
+    border-bottom: 1px solid rgba(245, 245, 245, 0.534);
+  }
+  &__left {
+    width: 50%;
+  }
+  &__right {
+    width: 50%;
+    text-align: right;
+    &--link {
+      width: 100%;
+      margin-bottom: 4rem;
+      @include flex(row, center, space-between);
+    }
+    &--choice {
+      transition: all 0.5s ease;
+      &:hover {
+        color: $color-blue-primary;
+      }
+    }
+
+    &--icon {
+      transition: all 0.5s ease;
+      &:hover {
+        color: $color-purple;
+      }
+    }
+    &--desc {
+      margin-bottom: 4rem;
+    }
+    &--social {
+      text-align: right;
+      @include flex(row, center, end);
+      margin-bottom: 5rem;
+    }
+    &--icon {
+      margin-left: 3rem;
+    }
+  }
+  &__bottom {
+    padding: 5rem 0 0;
+    @include flex(row, center, space-between);
+    font-size: 2rem;
+    font-weight: 300;
+  }
+}

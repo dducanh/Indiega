@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $color-body;
+  font-family: "Roboto", sans-serif;
+  color: $color-white;
+}
+
+a {
+  text-decoration: none;
+  color: $color-white;
+}
+
+ul,
+li {
+  list-style: none;
+}

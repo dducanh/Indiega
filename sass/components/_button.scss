@@ -1,0 +1,39 @@
+.btn {
+  display: inline-block;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+  padding: 2rem 6.5rem;
+  border: 2px solid #7c69e3;
+  font-weight: 600;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  &:hover {
+    background-color: $color-blue-primary;
+    border-color: $color-blue-primary;
+  }
+}
+
+.btn-white {
+  color: $color-blue-primary;
+  background-color: $color-white;
+  border-color: $color-white;
+  &:hover {
+    color: $color-white;
+  }
+}
+
+.btn-linear {
+  color: $color-white;
+  background-image: linear-gradient(
+    to right,
+    $color-blue-primary,
+    $color-purple
+  );
+  border: none;
+  transition: all 0.3s ease-out;
+  &:hover {
+    background-color: $color-blue-primary;
+    background-image: none;
+  }
+}

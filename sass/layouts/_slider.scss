@@ -1,0 +1,82 @@
+.slider-header {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-main {
+  display: flex;
+  flex-direction: row;
+  transition: all 0.5s ease;
+}
+
+.slider {
+  height: 112vh;
+  width: 100%;
+  flex: 1 0 100%;
+  background-size: cover;
+  margin-top: -86px;
+  &__1 {
+    background-image: url(../images/slide-1.jpg);
+  }
+  &__2 {
+    background-image: url(../images/slide-2.jpg);
+  }
+  &__3 {
+    background-image: url(../images/slide-3.jpg);
+  }
+
+  &__content {
+    padding: 14rem 10rem;
+    @include flex(row, start, space-between);
+  }
+  &__left {
+    margin-top: 25rem;
+    font-family: "Agency FB", sans-serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    &--page {
+      cursor: pointer;
+      transform: rotate(90deg);
+      padding: 0.9rem 2rem;
+    }
+  }
+  &__right {
+    margin-top: 25rem;
+    &--icon {
+      font-size: 1.4rem;
+      display: block;
+      margin: 1.5rem 0;
+      height: 4rem;
+      width: 4rem;
+      background-color: $color-white;
+      color: $color-black;
+      text-align: center;
+      line-height: 4rem;
+      border-radius: 50%;
+      transition: color 0.4s;
+      &:hover {
+        color: $color-blue-primary;
+      }
+    }
+  }
+  &__center {
+    margin-top: 23rem;
+    @include flex(column, center, space-between);
+    padding: 0 30rem;
+    &--title {
+      font-size: 9rem;
+      margin-bottom: 4rem;
+    }
+    &--desc {
+      margin-bottom: 4rem;
+      font-size: 1.4rem;
+      text-align: center;
+      animation: textShowingUp 0.5s ease-in 1s;
+      animation-fill-mode: backwards;
+    }
+    &--btn {
+      animation: buttonFromBottom 0.5s ease-in 1.5s;
+      animation-fill-mode: backwards;
+    }
+  }
+}

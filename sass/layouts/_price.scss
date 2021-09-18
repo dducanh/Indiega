@@ -1,0 +1,49 @@
+.price {
+  padding: 15rem 20rem;
+  &__list {
+    margin-top: 5rem;
+    @include flex(row, center, space-between);
+  }
+
+  &__item {
+    width: 31%;
+    text-align: center;
+    background-color: $color-dark-1;
+    border-radius: 10px;
+    &--title {
+      padding: 3rem 0;
+      font-size: 2.4rem;
+    }
+    &--amount {
+      color: white;
+      padding: 0.5rem 0;
+      margin-bottom: 4rem;
+      &-1 {
+        background-color: $color-blue-primary;
+      }
+      &-2 {
+        background-color: $color-blue-2;
+      }
+      &-3 {
+        background-color: $color-purple;
+      }
+    }
+
+    &--btn {
+      margin: 5rem 0;
+    }
+  }
+  &__info {
+    margin-top: 5rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: $color-text-gray;
+    padding: 0 3rem;
+    &--item:not(:last-child) {
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid rgba(194, 212, 248, 0.2);
+    }
+  }
+}
